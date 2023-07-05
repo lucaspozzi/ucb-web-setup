@@ -10,6 +10,12 @@ mkdir src
 touch src/app.py
 export FLASK_APP=src/app.py
 
-# code
+# code steps
 
 flask run
+
+# git steps
+
+pip3 install gunicorn
+pip3 freeze > requirements.txt
+echo "web: gunicorn src.app:app" > Procfile
